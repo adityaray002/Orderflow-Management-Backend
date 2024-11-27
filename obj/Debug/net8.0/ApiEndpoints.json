@@ -1,0 +1,202 @@
+[
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.ElectronicsController",
+    "Method": "AddElectronics",
+    "RelativePath": "addElectronics",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "electronics",
+        "Type": "OrderFlow_Management.Data.Electronics",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.StatusController",
+    "Method": "AddStatus",
+    "RelativePath": "addStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "OrderFlow_Management.Data.Status",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.UserController",
+    "Method": "AddUser",
+    "RelativePath": "addUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "OrderFlow_Management.Data.UserInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.OrderController",
+    "Method": "GetAllOrder",
+    "RelativePath": "allorder",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.ElectronicsController",
+    "Method": "DeleteElectronics",
+    "RelativePath": "DeleteElectronics/{Eid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Eid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.StatusController",
+    "Method": "DeleteStatus",
+    "RelativePath": "DeleteStatus/{Sid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "DeleteUser/{Uid}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Uid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.ElectronicsController",
+    "Method": "GetAllElectronics",
+    "RelativePath": "getAllElectronics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.StatusController",
+    "Method": "GetAllStatus",
+    "RelativePath": "getAllStatus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.UserController",
+    "Method": "GetAllUser",
+    "RelativePath": "getAllUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.UserController",
+    "Method": "GetUserByEmail",
+    "RelativePath": "getUserByEmail/{email}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.OrderController",
+    "Method": "AddOrder",
+    "RelativePath": "order",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "OrderFlow_Management.Data.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.OrderController",
+    "Method": "GetOrderById",
+    "RelativePath": "order/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.OrderController",
+    "Method": "UpdateOrder",
+    "RelativePath": "updateOrder",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "OrderFlow_Management.Data.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
