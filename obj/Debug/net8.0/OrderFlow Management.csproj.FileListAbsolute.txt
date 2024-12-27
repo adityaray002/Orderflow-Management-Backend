@@ -140,3 +140,4 @@ H:\Entity Framework core\OrderFlow Management\obj\Debug\net8.0\refint\OrderFlow 
 H:\Entity Framework core\OrderFlow Management\obj\Debug\net8.0\OrderFlow Management.pdb
 H:\Entity Framework core\OrderFlow Management\obj\Debug\net8.0\OrderFlow Management.genruntimeconfig.cache
 H:\Entity Framework core\OrderFlow Management\obj\Debug\net8.0\ref\OrderFlow Management.dll
+H:\Entity Framework core\OrderFlow Management\obj\Debug\net8.0\OrderFlow Management.sourcelink.json
