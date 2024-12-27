@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrderFlow Management")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c868fdeb9146081d9dc71fec4dea4aaa7c5190b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cde25746fcbc0b4f99b05888da5566a03235930")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrderFlow Management")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrderFlow Management")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

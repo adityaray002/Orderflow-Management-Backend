@@ -12,10 +12,12 @@ namespace OrderFlow_Management.Data
         
         public int StatusId { get; set; }
        
-        public int ElectronicId{ get; set; }
+        public int ProductId{ get; set; }
        
        
         public int UserInfoId { get; set; }
-        
+
+     
+
     }
 }

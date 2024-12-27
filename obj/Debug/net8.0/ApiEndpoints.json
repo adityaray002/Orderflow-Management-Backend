@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "OrderFlow_Management.Controllers.AdminController",
+    "Method": "AddAdmin",
+    "RelativePath": "addAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "admin",
+        "Type": "OrderFlow_Management.Data.Admin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderFlow_Management.Controllers.ElectronicsController",
     "Method": "AddElectronics",
     "RelativePath": "addElectronics",
@@ -10,6 +26,22 @@
       {
         "Name": "electronics",
         "Type": "OrderFlow_Management.Data.Electronics",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.ProductsController",
+    "Method": "AddElectronics",
+    "RelativePath": "addProducts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "products",
+        "Type": "OrderFlow_Management.Data.Products",
         "IsRequired": true
       }
     ],
@@ -116,6 +148,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "OrderFlow_Management.Controllers.ProductsController",
+    "Method": "GetAllProducts",
+    "RelativePath": "getAllProducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderFlow_Management.Controllers.StatusController",
     "Method": "GetAllStatus",
     "RelativePath": "getAllStatus",
@@ -146,6 +188,38 @@
       {
         "Name": "email",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.AdminController",
+    "Method": "LoginAdmin",
+    "RelativePath": "loginadmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminDTO",
+        "Type": "OrderFlow_Management.Data.AdminDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrderFlow_Management.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "loginuser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "OrderFlow_Management.Data.UserDTO",
         "IsRequired": true
       }
     ],

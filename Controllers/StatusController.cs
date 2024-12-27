@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OrderFlow_Management.Data;
 using OrderFlow_Management.Services;
@@ -32,7 +33,7 @@ namespace OrderFlow_Management.Controllers
             await statusServices.DeleteStatus(Sid);
             return Ok();
         }
-
+        
         [HttpGet("/getAllStatus")]
         public async Task<IActionResult> GetAllStatus()
         {

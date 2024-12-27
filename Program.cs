@@ -1,12 +1,18 @@
 
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using OrderFlow_Management.Data;
 using OrderFlow_Management.Services;
+using System.Text;
 
 namespace OrderFlow_Management
 {
     public class Program
     {
+        
+
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +27,28 @@ namespace OrderFlow_Management
             builder.Services.AddScoped<StatusServices>();
             builder.Services.AddScoped<UserServices>();
             builder.Services.AddScoped<OrderServices>();
+            builder.Services.AddScoped<ProductsServices>();
+
+
+            builder.Services.AddAuthentication(cfg => {
+                cfg.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                cfg.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+               
+            }).AddJwtBearer(x => {
+               
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidIssuer = builder.Configuration["Jwt:Issuer"],
+                    ValidAudience = builder.Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                   
+                };
+            });
+
             builder.Services.AddScoped(sp => new HttpClient
             {
                 BaseAddress = new Uri("https://localhost:7122/") // Update with your backend's base URL
@@ -33,6 +61,7 @@ namespace OrderFlow_Management
 
             var app = builder.Build();
 
+            app.UseAuthentication();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

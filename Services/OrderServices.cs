@@ -23,12 +23,12 @@ namespace OrderFlow_Management.Services
         {
             List<Order> orders = await appDbContext.Order.ToListAsync();
             List<OrderResponse> AllOrders = new List<OrderResponse>();
-            foreach(var o in orders)
+            foreach (var o in orders)
             {
                 OrderResponse response = new OrderResponse();
-                var user = await appDbContext.Users.FirstOrDefaultAsync(u=>u.Id == o.UserInfoId);
-                var electronic = await appDbContext.Electronics.FirstOrDefaultAsync(u=>u.Id == o.ElectronicId);
-                var status = await appDbContext.Status.FirstOrDefaultAsync(u=>u.Id == o.StatusId);
+                var user = await appDbContext.Users.FirstOrDefaultAsync(u => u.Id == o.UserInfoId);
+                var electronic = await appDbContext.Products.FirstOrDefaultAsync(u => u.id == o.ProductId);
+                var status = await appDbContext.Status.FirstOrDefaultAsync(u => u.Id == o.StatusId);
                 response.id = o.Id;
                 response.username = user.Name;
                 response.email = user.Email;
@@ -36,14 +36,16 @@ namespace OrderFlow_Management.Services
                 response.phoneno = user.PhoneNo;
                 response.dateTime = o.OrderDate;
                 response.statusName = status.Name;
-                response.electronicItem = electronic.Name;
+                response.electronicItem = electronic.name;
                 response.messageInfo = o.MessageInfo;
                 AllOrders.Add(response);
-                
+
             }
-           
+
             return Results.Ok(AllOrders);
         }
+
+
 
         public async Task<IResult> GetOrderById(int id)
         {
@@ -67,7 +69,7 @@ namespace OrderFlow_Management.Services
 
          
             
-            existingOrder.ElectronicId = updatedOrder.ElectronicId;
+            existingOrder.ProductId = updatedOrder.ProductId;
             existingOrder.StatusId = updatedOrder.StatusId;
             existingOrder.MessageInfo = updatedOrder.MessageInfo;
 

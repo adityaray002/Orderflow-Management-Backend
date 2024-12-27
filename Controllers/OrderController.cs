@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OrderFlow_Management.Data;
 using OrderFlow_Management.Services;
@@ -25,7 +26,7 @@ namespace OrderFlow_Management.Controllers
             await orderServices.AddOrder(order);
             return Ok(order);
         }
-
+        [Authorize]
         [HttpGet("/allorder")]
         public async Task<IActionResult> GetAllOrder()
         {

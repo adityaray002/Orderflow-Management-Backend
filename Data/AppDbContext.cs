@@ -10,6 +10,10 @@ namespace OrderFlow_Management.Data
         public DbSet<Status> Status { get; set; }
         public DbSet<Electronics> Electronics { get; set; }
         public DbSet<Order> Order { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<UserDTO> UserDTO { get; set; }
+        public DbSet<Admin> Admin { get; set; }
+        public DbSet<AdminDTO> AdminDTO { get; set; }
 
          
     }
